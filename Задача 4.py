@@ -6,9 +6,9 @@ res = []
 def generate_password(shipName: str, planet: str) -> str:
     """
     Returns password by data
-    :param shipName: str
-    :param planet: str
-    :return: password
+    :param shipName: name of the ship
+    :param planet: name of the planet
+    :return: generated password
     """
     return f'{planet[-3:]}{shipName[2:0:-1]}{planet[2::-1]}'.upper()
 

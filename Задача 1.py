@@ -4,8 +4,8 @@ import csv
 def check_coords(coords: str) -> bool:
     """
     Checks if 0 in coords - returns False else returns True
-    :param coords: str
-    :return: bool
+    :param coords: string as 'x y'
+    :return: if 0 in coords - returns False else returns True
     """
     for i in coords.split():
         if int(i) == 0:
@@ -21,9 +21,9 @@ def fixData(shipName: str, planet: str, direction: str) -> list[str]:
     :param direction: str
     :return: fixed line (list[str])
     """
-    shipNumber = shipName.split('-')[1]
-    n = int(shipNumber[0])
-    m = int(shipNumber[1])
+    ship_number = shipName.split('-')[1]
+    n = int(ship_number[0])
+    m = int(ship_number[1])
     t = len(planet)
     xd, yd = map(int, direction.split())
     if n > 5:
@@ -42,12 +42,12 @@ def main():
     with open('space.txt', encoding='utf-8') as f:
         reader = csv.reader(f, delimiter='*')
         for line in reader:
-            shipName, planet, coord_place, direction = line
-            if shipName != "ShipName" and not check_coords(coord_place):
-                line = fixData(shipName, planet, direction)
+            ship_name, planet, coord_place, direction = line
+            if ship_name != "ShipName" and not check_coords(coord_place):
+                line = fixData(ship_name, planet, direction)
             print('*'.join(line), file=res)
-            if shipName.split("-")[0][-1] == 'V':
-                print(f'{shipName} - ({line[-2]})')
+            if ship_name.split("-")[0][-1] == 'V':
+                print(f'{ship_name} - ({line[-2]})')
     res.close()
 
 

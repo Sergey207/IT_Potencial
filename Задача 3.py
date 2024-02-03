@@ -3,14 +3,14 @@ import csv
 ships = []
 
 
-def getName(shipName: str) -> str:
+def getName(ship_name: str) -> str:
     """
     This function returns formatted info about ship
-    :param shipName: str
+    :param ship_name: str
     :return: formatted string
     """
     for i in ships:
-        if i[0] == shipName:
+        if i[0] == ship_name:
             return f"Корабль {i[0]} был отправлен с планеты: {i[1]} и его направление движения было: {i[2]}"
     return "error.. er.. ror.."
 
