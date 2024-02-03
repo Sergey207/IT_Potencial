@@ -28,7 +28,7 @@ space_uniq_password.csv - файл с паролями
 2) ``git clone https://github.com/Sergey207/IT_Potencial``
 3) ``cd IT_Potencial``
 4) Проект не требует дополнительных библиотек и каких-то инструментов
-5) Вы можете запустить проект с помощью ``python "Задача 2.py"``
+5) Вы можете запустить проект с помощью ``python Problem2.py``
 6) Вы также можете импортировать функции из исходников ``from Problem1 import fixData``
 --- 
 
