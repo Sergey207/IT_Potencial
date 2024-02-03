@@ -48,6 +48,7 @@ def main():
             print('*'.join(line), file=res)
             if shipName.split("-")[0][-1] == 'V':
                 print(f'{shipName} - ({line[-2]})')
+    res.close()
 
 
 main()
